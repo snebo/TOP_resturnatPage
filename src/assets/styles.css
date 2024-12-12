@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: antiquewhite;
+}
 #content {
   background-color: antiquewhite;
 }
@@ -185,8 +191,9 @@ footer {
   background-color: rgb(22, 22, 22);
   padding: 40px;
   display: flex;
+  margin-top: auto;
 }
-.contact {
+.contact-footer {
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -217,4 +224,28 @@ footer {
 }
 .connect-links > div > a:hover {
   border-bottom: 1px solid;
+}
+.resturant-menu-container {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid; */
+  width: 100vw;
+  align-items: center;
+  padding: 50px 0;
+}
+.resturant-menu {
+  border: 1px solid rgba(48, 42, 33, 0.753);
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 50%;
+}
+table {
+  width: 100%;
+  text-align: center;
+  /* border: 3px solid; */
+}
+th,
+td {
+  border: 1px solid;
+  padding: 10px;
 }
