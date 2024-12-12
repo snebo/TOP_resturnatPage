@@ -180,3 +180,41 @@ nav {
   font-weight: 600;
   font-size: 1.2em;
 }
+
+footer {
+  background-color: rgb(22, 22, 22);
+  padding: 40px;
+  display: flex;
+}
+.contact {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.connect-links {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.connect-links > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.connect-links > div > h4 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: white;
+}
+.connect-links > div > a {
+  font-size: 1em;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+}
+.connect-links > div > a:hover {
+  border-bottom: 1px solid;
+}
