@@ -3,36 +3,39 @@ import dish1 from "./images/salad1.jpg"
 import dish2 from "./images/salad2.jpg"
 import dish3 from "./images/salad3.jpg"
 export const DisplayContent = (() => {
-    const defaultContent = (content_container) => {
-        const main = main_content()
-        const section = menu_options()
-        content_container.append(main)
-        content_container.append(section)
-    }
+  const defaultContent = (content_container) => {
+    content_container.innerHTML = ''
+    const main = main_content()
+    const section = menu_options()
+    content_container.append(main)
+    content_container.append(section)
+  }
 
-    const menuContent = (content_container) => {
-        const main = menu_content()
-        content_container.append(main)
-    }
-    const aboutContent = (content_container) => {
-        const main = about_content()
-        content_container.append(main)
-    }
-    const main_content = () => {
-        const main = document.createElement('div')
-        main.classList.add('main')
-        main.innerHTML = `<img src="${resturant}" alt="family centric" />
+  const menuContent = (content_container) => {
+    content_container.innerHTML = ''
+    const main = menu_content()
+    content_container.append(main)
+  }
+  const aboutContent = (content_container) => {
+    content_container.innerHTML = ''
+    const main = about_content()
+    content_container.append(main)
+  }
+  const main_content = () => {
+    const main = document.createElement('div')
+    main.classList.add('main')
+    main.innerHTML = `<img src="${resturant}" alt="family centric" />
         <div class="intro-text">
           <h4>New Menu</h4>
           <h1 class="main_text">Now serving Winter</h1>
           <button>Order now &RightArrow;</button>
         </div>`
-        return main
-    }
-    const menu_options = () => {
-        const main = document.createElement('div')
-        main.classList.add('options')
-        main.innerHTML = `<ul class="menu-categories">
+    return main
+  }
+  const menu_options = () => {
+    const main = document.createElement('div')
+    main.classList.add('options')
+    main.innerHTML = `<ul class="menu-categories">
           <li class="active" tabindex="0">Salads</li>
           <li tabindex="0">Warm Bowls</li>
           <li tabindex="0">Sides</li>
@@ -77,13 +80,13 @@ export const DisplayContent = (() => {
             </div>
           </div>
         </div>`
-        return main
-    }
+    return main
+  }
 
-    const menu_content = () => {
-        const main = document.createElement('div')
-        main.classList.add('resturant-menu-container')
-        main.innerHTML = `<div class="resturant-menu">
+  const menu_content = () => {
+    const main = document.createElement('div')
+    main.classList.add('resturant-menu-container')
+    main.innerHTML = `<div class="resturant-menu">
           <table>
             <tr>
               <th>no</th>
@@ -138,13 +141,13 @@ export const DisplayContent = (() => {
           </table>
         </div>`
 
-        return main
-    }
-    const about_content = () => {
-        const main = document.createElement('div')
-        main.innerHTML = `<h1>I really can't think of a way to apply this</h1>
+    return main
+  }
+  const about_content = () => {
+    const main = document.createElement('div')
+    main.innerHTML = `<h1>I really can't think of a way to apply this</h1>
         <p>... hmmm since i can't use lorem in script, this is going to be a very short about section</p>`
-        return main
-    }
-    return { defaultContent, menuContent, aboutContent }
+    return main
+  }
+  return { defaultContent, menuContent, aboutContent }
 })()
